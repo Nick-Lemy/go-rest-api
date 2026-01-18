@@ -1,6 +1,9 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/yourGithubUsername/gin-rest-tutorial/internal/app/rest_api/handlers"
+)
 
 func RegisterPublicEndpoints(router *gin.Engine, userHandlers *handlers.User) {
 	router.GET("/users", userHandlers.GetAllUsers)
